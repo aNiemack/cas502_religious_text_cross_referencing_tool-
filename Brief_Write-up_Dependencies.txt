@@ -1,0 +1,16 @@
+02/08/2025
+
+Andrew and Josh met over zoom to set up the dependency management. Andrew
+has previous experience in coding and working with GitHub, so our 
+teamwork consisted of Josh doing it and Andrew helping him when he wasn't 
+sure what the next step was. 
+
+There were no issues with creating the requirements.txt and pushing it to
+GitHub. Andrew then downloaded some dependency packages for creating a 
+website that he then added to the requirements text file. There was an 
+issue with trying to run python in GitBash so Josh downloaded the latest 
+version in order to try doing it in the Shell. It still hasn't quite 
+worked, but Josh is hoping to figure it out for a later task of reading
+xml files in python and adding that to the website for the research tool. 
+There were no issues with committing the .gitignore for the virtual 
+environment. 
