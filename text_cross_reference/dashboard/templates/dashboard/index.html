@@ -38,14 +38,16 @@
         border-radius: 10px;
         height: 70%;
         overflow-y: auto;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
       .search {
         margin: 30px;
         padding: 20px;
         background-color: gainsboro;
         border-radius: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
     </style>
   </head>
@@ -54,10 +56,15 @@
       <div class="header"><h2>Textual Cross Reference</h2></div>
       <div class="text1">
         <div class="search">
-          <input type="text" style="width: 100%; background-color: ghostwhite;" placeholder="Search" />
+          <input
+            type="text"
+            name="text-search-1"
+            style="width: 100%; background-color: ghostwhite"
+            placeholder="Search"
+          />
         </div>
-        <h2 style="text-align: center;">Text 1</h2>
-        <div class="card">
+        <h2 style="text-align: center">Text 1</h2>
+        <div id="text-1" class="card">
           Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit
           nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes
           rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula
@@ -111,9 +118,13 @@
       </div>
       <div class="text2">
         <div class="search">
-          <input type="text" style="width: 100%; background-color: ghostwhite;" placeholder="Search" />
+          <input
+            type="text"
+            style="width: 100%; background-color: ghostwhite"
+            placeholder="Search"
+          />
         </div>
-        <h2 style="text-align: center;">Text 2</h2>
+        <h2 style="text-align: center">Text 2</h2>
         <div class="card">
           Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit
           nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes
@@ -169,4 +180,31 @@
       <div class="footer"><h4>Notes here maybe?</h4></div>
     </div>
   </body>
+
+  <script>
+    document
+      .getElementsByName("text-search-1")[0]
+      .addEventListener("keyup", highlight);
+
+    function highlight() {
+      console.log(this.value);
+      let textElement = document.getElementById("text-1");
+      let textToSearch = textElement.innerHTML;
+      let regularExpression = new RegExp(`${this.value}`, "gi");
+      console.log(regularExpression);
+
+      let unHighlightText = textToSearch
+        .replaceAll(`<mark>`, ``)
+        .replaceAll(`</mark>`, "");
+
+      // TODO: is there a way to retain capitalization? or do I need a whole different approach?
+      //let foundWord = unHighlightText.match(regularExpression)[0];
+      let highlightedText = unHighlightText.replace(
+        regularExpression,
+        `<mark>${this.value}</mark>`
+      );
+
+      textElement.innerHTML = highlightedText;
+    }
+  </script>
 </html>
