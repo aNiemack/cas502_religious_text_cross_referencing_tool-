@@ -54,7 +54,7 @@ ROOT_URLCONF = "text_cross_reference.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ["dashboard/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
