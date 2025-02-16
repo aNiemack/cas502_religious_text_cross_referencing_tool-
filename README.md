@@ -12,3 +12,13 @@ The plan is to talk regularly over slack about each week’s goals and what the 
 
 ## Branching Strategy
 For this project when each team member is working on a particular task or issue they will create a working branch off main for the task where they will do the primary work on that task. In cases where one member's work is dependent on the other teammate they can merge with the other working branch to get the necessary updates. When a task or issue is completed then the team member will create a pull request to merge the working branch back into main. This will allow everyone to review and approve the code before pushing to main.
+
+
+## running code
+Running these commands should start the site
+
+1. python -m pip install -r requirements.txt
+2. cd text_cross_reference
+3. python manage.py runserver
+
+Then go to localhost:8000 in browser to view.
