@@ -1,0 +1,45 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "text1 text2"
+    "footer footer";
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 10vh 70vh 10vh;
+  gap: 5px;
+  padding: 5px;
+  background-color: blanchedalmond;
+}
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+}
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container > div.text1 {
+  grid-area: text1;
+}
+.container > div.text2 {
+  grid-area: text2;
+}
+.container > div.footer {
+  grid-area: footer;
+}
+.card {
+  margin: 30px;
+  padding: 20px;
+  background-color: ghostwhite;
+  border-radius: 10px;
+  height: 70%;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.search {
+  margin: 30px;
+  padding: 20px;
+  background-color: gainsboro;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
