@@ -1,14 +1,11 @@
-import re
-import EnglishESVBible.xml
+def word_search(word):
+	count = 0
+	with open('EnglishESVBible.xml', 'r') as f:
+		for line in f:
+			words = line.split()
+			for i in words:
+				if(i.lower()==word):
+					count=count+1
+	return count
 
-text = EnglishESVBible.xml
-word = input()
-
-	def search(text, word):
-		if(word in text):
-			print(count(word in text))
-		else:
-			print("Word not found"
-
-	print(search(text,word))
 
