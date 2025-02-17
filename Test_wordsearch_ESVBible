@@ -1,0 +1,29 @@
+import unittest
+import Biblesearch
+
+class TestWordSearch(unittest.TestCase):
+	
+	def test_wordsearch_word_that_exists(self):
+		Count = Biblesearch.wordsearch("heaven")
+		self.assertEqual(Count, 689)		
+
+	def test_wordsearch_no_return(self):
+		Count = Biblesearch.wordsearch("computer")
+		self.assertEqual(Count, 0)
+
+	def test_wordsearch_no_input(self):
+		Count = Biblesearch.wordsearch("")
+		self.assertEqual(Count, 0)	
+
+# The challenges I faced when writing these tests were 
+# that I did not understand initially how the values worked
+# to test the function that I wanted to write. Another 
+# challenge was in writing the actual code that this test 
+# was meant to test. I figured out how to do grep, but I 
+# had a lot of difficulty translating that into python. I
+# don't know that I'd do anything different for the next 
+# time, but I do want to find out more how to get from 
+# GitBash into python coding without needing to switch
+# between the Jupyter notebook in Anaconda and the GitBash
+# interface on my computer.
+
