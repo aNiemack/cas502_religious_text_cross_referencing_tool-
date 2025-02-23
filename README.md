@@ -26,5 +26,8 @@ Then go to localhost:8000 in browser to view.
 ## Collaboration Documentation
 Should any bugs be found or features found to be needed an issue should be generated on GitHub for me to work on. This can include either features or bugs. Related to this, should anyone wish to contribute they can either send a request to merge, or create an issue detailing what they'd like to work on. Should further collaboration be pursued, the owner of the repository will reach out for further information. 
 
+## User Documentation
+This code is a word search function that will search textual databases for instances of string inputs. It's output should be one of two things; it will either be a word count or it will return the lines of data that include the string you search for depending on which iteration of the code you run. 
 
+## License
 
