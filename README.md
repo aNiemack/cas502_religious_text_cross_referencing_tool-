@@ -30,4 +30,4 @@ Should any bugs be found or features found to be needed an issue should be gener
 This code is a word search function that will search textual databases for instances of string inputs. It's output should be one of two things; it will either be a word count or it will return the lines of data that include the string you search for depending on which iteration of the code you run. 
 
 ## License
-
+I chose the  GNU GENERAL PUBLIC LICENSE, version 2 because it allowed for public use, but did not grant patent use rights, which is something I did not want on this software. 
