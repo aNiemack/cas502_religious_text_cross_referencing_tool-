@@ -3,14 +3,21 @@
 <html>
   <head>
     <link rel="stylesheet" href="{% static 'dashboard/style.css' %}" />
-    <!-- <script src="{% static 'dashboard/index.js' %}" defer></script> -->
-    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+    <!-- For simplicity just get htmx from unpkg -->
+    <script
+      src="https://unpkg.com/htmx.org@2.0.4"
+      integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
       <div class="header"><h2>Textual Cross Reference</h2></div>
       <div class="text1">
         <div class="search">
+          <!-- htmx allows us to make an ajax call here to the search endpoint. Request
+               is triggered on keyup when the input value is changed endpoint takes the input
+               value and returns text with matches highlighted. -->
           <input
             type="text"
             name="text-search-1"

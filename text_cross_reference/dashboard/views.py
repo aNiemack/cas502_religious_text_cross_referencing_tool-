@@ -2,7 +2,6 @@ from django.shortcuts import render, HttpResponse
 import re
 
 
-# Create your views here.
 def index(request):
     return render(request, "dashboard/index.html")
 
@@ -25,12 +24,23 @@ def search(request):
 
     searched = request.GET.get("text-search-1", "")
 
-    
     return HttpResponse(highlight_searched(searched, text))
 
 
 def highlight_searched(searched, text):
-        if searched:
-            return re.sub(re.escape(searched), lambda m: f"<mark>{m.group(0)}</mark>", text, flags=re.IGNORECASE)
-        else:
-             return text
+    """Takes two strings 'text', 'searched' and finds all instances of 'searched' in 'text', and adds the html 'mark' element
+    around them. Returns the modified text. Ignores case when matching. This allows a user to search for text on a page, and have any matches
+    highlighted"""
+
+    # When the user clears the search field and empty string will be sent,
+    # I'm not sure but there might also be a case where null/None is returned,
+    # in either case we just want to return the original text with no markup.
+    if searched:
+        return re.sub(
+            re.escape(searched),
+            lambda m: f"<mark>{m.group(0)}</mark>",
+            text,
+            flags=re.IGNORECASE,
+        )
+    else:
+        return text
