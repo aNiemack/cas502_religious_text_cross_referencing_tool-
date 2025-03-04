@@ -20,10 +20,5 @@ class TestWord_Search(unittest.TestCase):
 # to test the function that I wanted to write. Another 
 # challenge was in writing the actual code that this test 
 # was meant to test. I figured out how to do grep, but I 
-# had a lot of difficulty translating that into python. I
-# don't know that I'd do anything different for the next 
-# time, but I do want to find out more how to get from 
-# GitBash into python coding without needing to switch
-# between the Jupyter notebook in Anaconda and the GitBash
-# interface on my computer.
+# had a lot of difficulty translating that into python.
 

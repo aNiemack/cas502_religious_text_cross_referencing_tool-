@@ -20,5 +20,7 @@ from dashboard import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.index)
+    path("", views.index),
+    path("search/", views.search),
+    path("translate/", views.translate)
 ]
