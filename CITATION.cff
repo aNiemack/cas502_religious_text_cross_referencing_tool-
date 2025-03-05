@@ -8,7 +8,7 @@ authors:
   given-names: "Andrew"
   orcid: 
 title: "Comparative Religious Database Tool"
-version: 0.1.0
-doi:
-date-released:2025-03-04
-url: https://github.com/aNiemack/cas502_religious_text_cross_referencing_tool-?tab=readme-ov-file
+version: "0.1.0"
+doi: "10.5281/zenodo.14969511"
+date-released: "2025-03-05"
+url: "https://github.com/aNiemack/cas502_religious_text_cross_referencing_tool-?tab=readme-ov-file"
